@@ -1,3 +1,5 @@
+let display = document.querySelector("#calc-display");
+
 let leftNum;
 let rightNum;
 let operator;
@@ -29,4 +31,8 @@ function multiply(a, b) {
 
 function divide(a, b) {
     return a / b;
+}
+
+function updateDisplay(input) {
+    display.value += input;
 }

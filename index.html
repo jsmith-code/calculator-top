@@ -9,25 +9,25 @@
 </head>
 <body>
     <div class="calc-container">
-        <input class="calc-display" placeholder="0" disabled></input>
+        <input id="calc-display" placeholder="0" disabled></input>
         <div class="calc-btns">
             <div class="calc-btns-digits">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>0</button>
+                <button onclick="updateDisplay('1')">1</button>
+                <button onclick="updateDisplay('2')">2</button>
+                <button onclick="updateDisplay('3')">3</button>
+                <button onclick="updateDisplay('4')">4</button>
+                <button onclick="updateDisplay('5')">5</button>
+                <button onclick="updateDisplay('6')">6</button>
+                <button onclick="updateDisplay('7')">7</button>
+                <button onclick="updateDisplay('8')">8</button>
+                <button onclick="updateDisplay('9')">9</button>
+                <button onclick="updateDisplay('0')">0</button>
             </div>
             <div class="calc-btns-operators">
-                <button>+</button>
-                <button>-</button>
-                <button>*</button>
-                <button>/</button>
+                <button onclick="updateDisplay('+')">+</button>
+                <button onclick="updateDisplay('-')">-</button>
+                <button onclick="updateDisplay('*')">*</button>
+                <button onclick="updateDisplay('/')">/</button>
                 <button>=</button>
                 <button>C</button>
             </div>
