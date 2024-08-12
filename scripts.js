@@ -36,3 +36,7 @@ function divide(a, b) {
 function updateDisplay(input) {
     display.value += input;
 }
+
+function clearDisplay() {
+    display.value = "";
+}
