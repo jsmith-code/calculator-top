@@ -1,3 +1,7 @@
+let leftNum;
+let rightNum;
+let operator;
+
 function operate(a, b, operator) {
     switch (operator) {
         case "+":
