@@ -1,7 +1,7 @@
 let display = document.querySelector("#calc-display");
 
-let leftNum;
-let rightNum;
+let leftNum = "";
+let rightNum = "";
 let operator;
 
 function operate(a, b, operator) {
