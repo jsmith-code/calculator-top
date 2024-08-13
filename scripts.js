@@ -34,7 +34,13 @@ function divide(a, b) {
 }
 
 function updateDisplay(input) {
-    display.value += input;
+    if (!operator) {
+        leftNum += input;
+        display.value = leftNum;
+    } else {
+        rightNum += input;
+        display.value = rightNum;
+    }
 }
 
 function clearDisplay() {
