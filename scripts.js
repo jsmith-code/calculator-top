@@ -40,3 +40,7 @@ function updateDisplay(input) {
 function clearDisplay() {
     display.value = "";
 }
+
+function setOperator(input) {
+    operator = input;
+}
