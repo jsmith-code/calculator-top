@@ -39,6 +39,9 @@ function updateDisplay(input) {
 
 function clearDisplay() {
     display.value = "";
+    leftNum = "";
+    rightNum = "";
+    operator = "";
 }
 
 function setOperator(input) {
