@@ -5,6 +5,9 @@ let rightNum = "";
 let operator;
 
 function operate(a, b, operator) {
+    a = parseFloat(a);
+    b = parseFloat(b);
+
     switch (operator) {
         case "+":
             return add(a, b);
