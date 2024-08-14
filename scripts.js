@@ -54,6 +54,7 @@ function clearDisplay() {
 }
 
 function setOperator(input) {
+    if (operator && rightNum) calculate();
     operator = input;
 }
 
