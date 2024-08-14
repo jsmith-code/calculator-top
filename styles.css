@@ -4,6 +4,14 @@ html {
     padding: 0;
 }
 
+button {
+    border: none;
+    padding: 4px 8px;
+    font-size: 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
 .calc-container {
     background-color: #2e2e2e;
     width: 350px;
