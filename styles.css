@@ -12,6 +12,11 @@ button {
     font-weight: bold;
 }
 
+button:hover {
+    cursor: pointer;
+    background-color: #c9c9c9;
+}
+
 .calc-container {
     background-color: #2e2e2e;
     width: 350px;
