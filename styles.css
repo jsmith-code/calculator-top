@@ -54,7 +54,7 @@ button:hover {
 }
 
 .calc-btns button {
-    flex-grow: 1;
+    flex: 1;
 }
 
 .calc-btns-operator {
