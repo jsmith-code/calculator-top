@@ -63,3 +63,11 @@ button:hover {
 .calc-btns-operator:hover {
     background-color: #cf9427;
 }
+
+.calc-btns-special {
+    background-color: #5d97ee;
+}
+
+.calc-btns-special:hover {
+    background-color: #5587d3;
+}
