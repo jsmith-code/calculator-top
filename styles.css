@@ -37,3 +37,21 @@ button:hover {
     color: #464133;
     border-radius: 8px;
 }
+
+.calc-btns {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 16px;
+}
+
+.calc-btns-row {
+    display: flex;
+    flex-grow: 1;
+    gap: 16px;
+}
+
+.calc-btns button {
+    flex-grow: 1;
+}
