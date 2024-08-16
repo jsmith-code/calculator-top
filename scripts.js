@@ -62,7 +62,7 @@ function calculate() {
     if (leftNum && rightNum && operator) {
         let result = operate(leftNum, rightNum, operator);
         display.value = result;
-        leftNum = result;
+        leftNum = String(result);
         rightNum = "";
         operator = "";
     }
