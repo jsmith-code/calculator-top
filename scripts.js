@@ -36,12 +36,12 @@ function divide(a, b) {
     return a / b;
 }
 
-function updateDisplay(input) {
+function handleInputDigit(digit) {
     if (operator) {
-        rightNum += input;
+        rightNum += digit;
         display.value = rightNum;
     } else {
-        leftNum += input;
+        leftNum += digit;
         display.value = leftNum;
     }
 }
