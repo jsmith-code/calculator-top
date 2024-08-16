@@ -2,7 +2,7 @@ let display = document.querySelector("#calc-display");
 
 let leftNum = "";
 let rightNum = "";
-let operator;
+let operator = "";
 
 function operate(a, b, operator) {
     a = parseFloat(a);
