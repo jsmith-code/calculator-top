@@ -37,12 +37,12 @@ function divide(a, b) {
 }
 
 function updateDisplay(input) {
-    if (!operator) {
-        leftNum += input;
-        display.value = leftNum;
-    } else {
+    if (operator) {
         rightNum += input;
         display.value = rightNum;
+    } else {
+        leftNum += input;
+        display.value = leftNum;
     }
 }
 
