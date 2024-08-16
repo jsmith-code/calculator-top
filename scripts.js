@@ -29,7 +29,7 @@ function calculate() {
     }
 }
 
-function clearDisplay() {
+function clearCalculator() {
     display.value = "";
     leftNum = "";
     rightNum = "";
