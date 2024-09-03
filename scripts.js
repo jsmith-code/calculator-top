@@ -7,30 +7,34 @@ let operator = "";
 function handleInputDigit(digit) {
     if (operator) {
         rightNum += digit;
-        display.value = rightNum;
+        updateDisplay(rightNum);
     } else {
         leftNum += digit;
-        display.value = leftNum;
+        updateDisplay(leftNum);
     }
 }
 
 function setOperator(input) {
     calculate();
     operator = input;
-}
+}    
 
 function calculate() {
     if (leftNum && rightNum && operator) {
         let result = operate(leftNum, rightNum, operator);
-        display.value = result;
+        updateDisplay(result);
         leftNum = String(result);
         rightNum = "";
         operator = "";
     }
 }
 
+function updateDisplay(value) {
+    display.value = value;
+}
+
 function clearCalculator() {
-    display.value = "";
+    updateDisplay("");
     leftNum = "";
     rightNum = "";
     operator = "";
