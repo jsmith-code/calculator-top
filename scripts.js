@@ -5,7 +5,7 @@ let rightNum = "";
 let operator = "";
 
 function handleInputDigit(digit) {
-    if (operator) {
+    if (operator && leftNum) {
         rightNum += digit;
         updateDisplay(rightNum);
     } else {
