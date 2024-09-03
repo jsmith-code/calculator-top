@@ -30,7 +30,7 @@ function calculate() {
 }
 
 function updateDisplay(value) {
-    display.value = value;
+    display.value = String(value).substring(0, 11);
 }
 
 function clearCalculator() {
