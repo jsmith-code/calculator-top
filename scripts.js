@@ -15,7 +15,7 @@ function handleInputDigit(digit) {
 }
 
 function setOperator(input) {
-    if (operator && rightNum) calculate();
+    calculate();
     operator = input;
 }
 
