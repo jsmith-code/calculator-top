@@ -6,10 +6,10 @@ let operator = "";
 
 function handleInputDigit(digit) {
     if (operator && leftNum) {
-        rightNum += digit;
+        rightNum === "0" ? rightNum = digit : rightNum += digit;
         updateDisplay(rightNum);
     } else {
-        leftNum += digit;
+        leftNum === "0" ? leftNum = digit : leftNum += digit;
         updateDisplay(leftNum);
     }
 }
