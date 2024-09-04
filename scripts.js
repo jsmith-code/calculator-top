@@ -19,6 +19,16 @@ function setOperator(input) {
     operator = input;
 }    
 
+function backspace() {
+    if (operator && leftNum) {
+        rightNum = rightNum.slice(0, -1);
+        updateDisplay(rightNum);
+    } else {
+        leftNum = leftNum.slice(0, -1);
+        updateDisplay(leftNum);
+    }
+}
+
 function setDecimal() {
     if (operator && leftNum) {
         if (!rightNum.includes(".")) {
