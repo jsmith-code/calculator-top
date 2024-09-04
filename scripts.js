@@ -19,6 +19,20 @@ function setOperator(input) {
     operator = input;
 }    
 
+function setDecimal() {
+    if (operator && leftNum) {
+        if (!rightNum.includes(".")) {
+            rightNum? rightNum += "." : rightNum = "0.";
+            updateDisplay(rightNum);
+        }
+    } else {
+        if (!leftNum.includes(".")) {
+            leftNum ? leftNum += "." : leftNum = "0.";
+            updateDisplay(leftNum);
+        }
+    }
+}
+
 function calculate() {
     if (leftNum && rightNum && operator) {
         let result = operate(leftNum, rightNum, operator);
