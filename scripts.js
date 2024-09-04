@@ -22,7 +22,7 @@ function setOperator(input) {
 function setDecimal() {
     if (operator && leftNum) {
         if (!rightNum.includes(".")) {
-            rightNum? rightNum += "." : rightNum = "0.";
+            rightNum ? rightNum += "." : rightNum = "0.";
             updateDisplay(rightNum);
         }
     } else {
