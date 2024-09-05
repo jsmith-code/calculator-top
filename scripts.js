@@ -39,6 +39,16 @@ function toggleSign() {
     }
 }
 
+function makePercentage() {
+    if (rightNum) {
+        rightNum = operate(rightNum, 100, "/");
+        updateDisplay(rightNum);
+    } else if (leftNum) {
+        leftNum = operate(leftNum, 100, "/");
+        updateDisplay(leftNum);
+    }
+}
+
 function backspace() {
     if (operator && leftNum) {
         rightNum = rightNum.slice(0, -1);
