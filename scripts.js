@@ -159,6 +159,10 @@ document.addEventListener("keydown", (e) => {
             case "%":
                 makePercentage();
                 break;
+
+            case "i":
+                toggleSign();
+                break;
         }
     }
 });
