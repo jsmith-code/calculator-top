@@ -4,11 +4,16 @@ let leftNum = "";
 let rightNum = "";
 let operator = "";
 
+let leftNumFromOperation = false;
+
 function handleInputDigit(digit) {
     if (operator && leftNum) {
         rightNum === "0" ? rightNum = digit : rightNum += digit;
         updateDisplay(rightNum);
     } else {
+        // If leftNum comes from previous calculation, ignore
+        // the previous number and allow for a new number to be input
+        if (leftNumFromOperation) clearCalculator();
         leftNum === "0" ? leftNum = digit : leftNum += digit;
         updateDisplay(leftNum);
     }
@@ -48,6 +53,7 @@ function calculate() {
         let result = operate(leftNum, rightNum, operator);
         updateDisplay(result);
         leftNum = String(result);
+        leftNumFromOperation = true;
         rightNum = "";
         operator = "";
     }
@@ -62,6 +68,7 @@ function clearCalculator() {
     leftNum = "";
     rightNum = "";
     operator = "";
+    leftNumFromOperation = false;
 }
 
 function operate(a, b, operator) {
