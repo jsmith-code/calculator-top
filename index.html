@@ -12,6 +12,10 @@
         <input id="calc-display" placeholder="0" disabled></input>
         <div class="calc-btns">
             <div class="calc-btns-row">
+                <button class="calc-btns-special" onclick="clearCalculator()">AC</button>
+                <button class="calc-btns-special" onclick="backspace()">↵</button>
+            </div>
+            <div class="calc-btns-row">
                 <button onclick="handleInputDigit('7')">7</button>
                 <button onclick="handleInputDigit('8')">8</button>
                 <button onclick="handleInputDigit('9')">9</button>
@@ -31,13 +35,9 @@
             </div>
             <div class="calc-btns-row">
                 <button onclick="handleInputDigit('0')">0</button>
-                <button class="calc-btns-special" onclick="clearCalculator()">AC</button>
                 <button class="calc-btns-special" onclick="setDecimal()">.</button>
-                <button class="calc-btns-operator" onclick="setOperator('+')">+</button>
-            </div>
-            <div class="calc-btns-row">
                 <button class="calc-btns-special" onclick="calculate()">=</button>
-                <button class="calc-btns-special" onclick="backspace()">↵</button>
+                <button class="calc-btns-operator" onclick="setOperator('+')">+</button>
             </div>
         </div>
     </div>
