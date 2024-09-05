@@ -42,6 +42,7 @@ function setDecimal() {
         }
     } else {
         if (!leftNum.includes(".")) {
+            if (leftNumFromOperation) clearCalculator();
             leftNum ? leftNum += "." : leftNum = "0.";
             updateDisplay(leftNum);
         }
