@@ -155,6 +155,10 @@ document.addEventListener("keydown", (e) => {
             case ".":
                 setDecimal();
                 break;
+
+            case "%":
+                makePercentage();
+                break;
         }
     }
 });
