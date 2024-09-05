@@ -24,6 +24,21 @@ function setOperator(input) {
     operator = input;
 }    
 
+function toggleSign() {
+    if (operator && leftNum && rightNum) {
+        rightNum.includes("-") ? 
+        rightNum = rightNum.replace("-", "") : rightNum = "-" + rightNum;
+
+        updateDisplay(rightNum);
+
+    } else if (leftNum) {
+        leftNum.includes("-") ? 
+        leftNum = leftNum.replace("-", "") : leftNum = "-" + leftNum;
+
+        updateDisplay(leftNum);
+    }
+}
+
 function backspace() {
     if (operator && leftNum) {
         rightNum = rightNum.slice(0, -1);
