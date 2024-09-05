@@ -42,9 +42,11 @@ function toggleSign() {
 function makePercentage() {
     if (rightNum) {
         rightNum = operate(rightNum, 100, "/");
+        rightNum = String(rightNum);
         updateDisplay(rightNum);
     } else if (leftNum) {
         leftNum = operate(leftNum, 100, "/");
+        leftNum = String(leftNum);
         updateDisplay(leftNum);
     }
 }
