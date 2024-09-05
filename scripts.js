@@ -95,3 +95,33 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b;
 }
+
+const digits = "0123456789";
+const operators = "/*-+";
+
+document.addEventListener("keydown", (e) => {
+    if (digits.includes(e.key)) {
+        handleInputDigit(e.key);
+    } else if (operators.includes(e.key)) {
+        setOperator(e.key);
+    } else {
+        switch (e.key) {
+            case "Enter":
+                calculate();
+                break;
+
+            case "Backspace":
+                backspace();
+                break;
+
+            case "c":
+            case "Delete":
+                clearCalculator();
+                break;
+
+            case ".":
+                setDecimal();
+                break;
+        }
+    }
+});
