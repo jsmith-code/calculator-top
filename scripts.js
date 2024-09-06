@@ -1,6 +1,6 @@
 let display = document.querySelector("#calc-display");
 
-let leftNum = "";
+let leftNum = "0";
 let rightNum = "";
 let operator = "";
 
@@ -88,12 +88,12 @@ function calculate() {
 }
 
 function updateDisplay(value) {
-    display.value = String(value).substring(0, 11);
+    display.textContent = String(value).substring(0, 10);
 }
 
 function clearCalculator() {
-    updateDisplay("");
-    leftNum = "";
+    updateDisplay("0");
+    leftNum = "0";
     rightNum = "";
     operator = "";
     leftNumFromOperation = false;
