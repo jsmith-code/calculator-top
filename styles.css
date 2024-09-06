@@ -91,3 +91,26 @@ button:active {
 .calc-btns-special:active {
     background-color: #4b74cc;
 }
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #2e2e2e;
+    color: #e4e4e4;
+}
+
+.info-orange {
+    color: #ffb732;
+}
+
+.info-blue {
+    color: #76adff;
+}
