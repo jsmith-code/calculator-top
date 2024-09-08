@@ -42,11 +42,9 @@ function toggleSign() {
 function makePercentage() {
     if (rightNum) {
         rightNum = operate(rightNum, 100, "/");
-        rightNum = String(rightNum);
         updateDisplay(rightNum);
     } else if (leftNum) {
         leftNum = operate(leftNum, 100, "/");
-        leftNum = String(leftNum);
         updateDisplay(leftNum);
     }
 }
@@ -62,17 +60,13 @@ function backspace() {
 }
 
 function setDecimal() {
-    if (operator && leftNum) {
-        if (!rightNum.includes(".")) {
-            rightNum ? rightNum += "." : rightNum = "0.";
-            updateDisplay(rightNum);
-        }
-    } else {
-        if (!leftNum.includes(".")) {
-            if (leftNumFromOperation) clearCalculator();
-            leftNum ? leftNum += "." : leftNum = "0.";
-            updateDisplay(leftNum);
-        }
+    if (operator && leftNum && !rightNum.includes(".")) {
+        rightNum ? rightNum += "." : rightNum = "0.";
+        updateDisplay(rightNum);
+    } else if (!leftNum.includes(".")) {
+        if (leftNumFromOperation) clearCalculator();
+        leftNum ? leftNum += "." : leftNum = "0.";
+        updateDisplay(leftNum);
     }
 }
 
@@ -80,7 +74,7 @@ function calculate() {
     if (leftNum && rightNum && operator) {
         let result = operate(leftNum, rightNum, operator);
         updateDisplay(result);
-        leftNum = String(result);
+        leftNum = result;
         leftNumFromOperation = true;
         rightNum = "";
         operator = "";
@@ -88,7 +82,7 @@ function calculate() {
 }
 
 function updateDisplay(value) {
-    display.textContent = String(value).substring(0, 10);
+    display.textContent = value.substring(0, 10);
 }
 
 function clearCalculator() {
@@ -103,6 +97,11 @@ function operate(a, b, operator) {
     a = parseFloat(a);
     b = parseFloat(b);
 
+    let result = getOperationResult(a, b, operator);
+    return String(result);
+}
+
+function getOperationResult(a, b, operator) {
     switch (operator) {
         case "+":
             return a + b;
