@@ -60,17 +60,13 @@ function backspace() {
 }
 
 function setDecimal() {
-    if (operator && leftNum) {
-        if (!rightNum.includes(".")) {
-            rightNum ? rightNum += "." : rightNum = "0.";
-            updateDisplay(rightNum);
-        }
-    } else {
-        if (!leftNum.includes(".")) {
-            if (leftNumFromOperation) clearCalculator();
-            leftNum ? leftNum += "." : leftNum = "0.";
-            updateDisplay(leftNum);
-        }
+    if (operator && leftNum && !rightNum.includes(".")) {
+        rightNum ? rightNum += "." : rightNum = "0.";
+        updateDisplay(rightNum);
+    } else if (!leftNum.includes(".")) {
+        if (leftNumFromOperation) clearCalculator();
+        leftNum ? leftNum += "." : leftNum = "0.";
+        updateDisplay(leftNum);
     }
 }
 
