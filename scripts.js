@@ -74,6 +74,7 @@ function calculate() {
     if (leftNum && rightNum && operator) {
         let result = operate(leftNum, rightNum, operator);
         updateDisplay(result);
+        leftNum = result;
         leftNumFromOperation = true;
         rightNum = "";
         operator = "";
