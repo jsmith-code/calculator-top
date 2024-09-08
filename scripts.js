@@ -103,6 +103,10 @@ function operate(a, b, operator) {
     a = parseFloat(a);
     b = parseFloat(b);
 
+    return getOperationResult(a, b, operator);
+}
+
+function getOperationResult(a, b, operator) {
     switch (operator) {
         case "+":
             return a + b;
