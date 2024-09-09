@@ -3,6 +3,7 @@ let display = document.querySelector("#calc-display");
 let leftNum = "0";
 let rightNum = "";
 let operator = "";
+const DISPLAY_DIGITS = 10;
 
 let leftNumFromOperation = false;
 
@@ -82,7 +83,7 @@ function calculate() {
 }
 
 function updateDisplay(value) {
-    display.textContent = value.substring(0, 10);
+    display.textContent = value.substring(0, DISPLAY_DIGITS);
 }
 
 function clearCalculator() {
