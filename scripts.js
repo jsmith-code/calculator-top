@@ -41,14 +41,13 @@ function backspace() {
 }
 
 function setDecimal() {
-    if (operator && focusNum && !storedNum.includes(".")) {
-        storedNum ? storedNum += "." : storedNum = "0.";
-        updateDisplay(storedNum);
+    if (focusNumNeedsReset) {
+        focusNum = "0.";
+        focusNumNeedsReset = false;
     } else if (!focusNum.includes(".")) {
-        if (focusNumNeedsReset) clearCalculator();
-        focusNum ? focusNum += "." : focusNum = "0.";
-        updateDisplay(focusNum);
+        focusNum += ".";
     }
+    updateDisplay();
 }
 
 function calculate() {
