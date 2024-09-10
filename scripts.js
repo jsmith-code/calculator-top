@@ -25,18 +25,9 @@ function setOperator(input) {
 }  
 
 function toggleSign() {
-    if (operator && focusNum && storedNum) {
-        storedNum.includes("-") ? 
-        storedNum = storedNum.replace("-", "") : storedNum = "-" + storedNum;
-
-        updateDisplay(storedNum);
-
-    } else if (focusNum) {
-        focusNum.includes("-") ? 
-        focusNum = focusNum.replace("-", "") : focusNum = "-" + focusNum;
-
-        updateDisplay(focusNum);
-    }
+    if (focusNum === "0") return;
+    focusNum.includes("-") ? focusNum = focusNum.replace("-", "") : focusNum = "-" + focusNum;
+    updateDisplay();
 }
 
 function makePercentage() {
