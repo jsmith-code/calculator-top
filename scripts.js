@@ -1,22 +1,22 @@
 let display = document.querySelector("#calc-display");
 
-let leftNum = "0";
-let rightNum = "";
+let focusNum = "0";
+let storedNum = "";
 let operator = "";
 const DISPLAY_DIGITS = 10;
 
-let leftNumFromOperation = false;
+let focusNumNeedsReset = false;
 
 function handleInputDigit(digit) {
-    if (operator && leftNum) {
-        rightNum === "0" ? rightNum = digit : rightNum += digit;
-        updateDisplay(rightNum);
+    if (operator && focusNum) {
+        storedNum === "0" ? storedNum = digit : storedNum += digit;
+        updateDisplay(storedNum);
     } else {
-        // If leftNum comes from previous calculation, ignore
+        // If focusNum comes from previous calculation, ignore
         // the previous number and allow for a new number to be input
-        if (leftNumFromOperation) clearCalculator();
-        leftNum === "0" ? leftNum = digit : leftNum += digit;
-        updateDisplay(leftNum);
+        if (focusNumNeedsReset) clearCalculator();
+        focusNum === "0" ? focusNum = digit : focusNum += digit;
+        updateDisplay(focusNum);
     }
 }
 
@@ -26,58 +26,58 @@ function setOperator(input) {
 }    
 
 function toggleSign() {
-    if (operator && leftNum && rightNum) {
-        rightNum.includes("-") ? 
-        rightNum = rightNum.replace("-", "") : rightNum = "-" + rightNum;
+    if (operator && focusNum && storedNum) {
+        storedNum.includes("-") ? 
+        storedNum = storedNum.replace("-", "") : storedNum = "-" + storedNum;
 
-        updateDisplay(rightNum);
+        updateDisplay(storedNum);
 
-    } else if (leftNum) {
-        leftNum.includes("-") ? 
-        leftNum = leftNum.replace("-", "") : leftNum = "-" + leftNum;
+    } else if (focusNum) {
+        focusNum.includes("-") ? 
+        focusNum = focusNum.replace("-", "") : focusNum = "-" + focusNum;
 
-        updateDisplay(leftNum);
+        updateDisplay(focusNum);
     }
 }
 
 function makePercentage() {
-    if (rightNum) {
-        rightNum = operate(rightNum, 100, "/");
-        updateDisplay(rightNum);
-    } else if (leftNum) {
-        leftNum = operate(leftNum, 100, "/");
-        updateDisplay(leftNum);
+    if (storedNum) {
+        storedNum = operate(storedNum, 100, "/");
+        updateDisplay(storedNum);
+    } else if (focusNum) {
+        focusNum = operate(focusNum, 100, "/");
+        updateDisplay(focusNum);
     }
 }
 
 function backspace() {
-    if (operator && leftNum) {
-        rightNum = rightNum.slice(0, -1);
-        updateDisplay(rightNum);
+    if (operator && focusNum) {
+        storedNum = storedNum.slice(0, -1);
+        updateDisplay(storedNum);
     } else {
-        leftNum = leftNum.slice(0, -1);
-        updateDisplay(leftNum);
+        focusNum = focusNum.slice(0, -1);
+        updateDisplay(focusNum);
     }
 }
 
 function setDecimal() {
-    if (operator && leftNum && !rightNum.includes(".")) {
-        rightNum ? rightNum += "." : rightNum = "0.";
-        updateDisplay(rightNum);
-    } else if (!leftNum.includes(".")) {
-        if (leftNumFromOperation) clearCalculator();
-        leftNum ? leftNum += "." : leftNum = "0.";
-        updateDisplay(leftNum);
+    if (operator && focusNum && !storedNum.includes(".")) {
+        storedNum ? storedNum += "." : storedNum = "0.";
+        updateDisplay(storedNum);
+    } else if (!focusNum.includes(".")) {
+        if (focusNumNeedsReset) clearCalculator();
+        focusNum ? focusNum += "." : focusNum = "0.";
+        updateDisplay(focusNum);
     }
 }
 
 function calculate() {
-    if (leftNum && rightNum && operator) {
-        let result = operate(leftNum, rightNum, operator);
+    if (focusNum && storedNum && operator) {
+        let result = operate(focusNum, storedNum, operator);
         updateDisplay(result);
-        leftNum = result;
-        leftNumFromOperation = true;
-        rightNum = "";
+        focusNum = result;
+        focusNumNeedsReset = true;
+        storedNum = "";
         operator = "";
     }
 }
@@ -88,10 +88,10 @@ function updateDisplay(value) {
 
 function clearCalculator() {
     updateDisplay("0");
-    leftNum = "0";
-    rightNum = "";
+    focusNum = "0";
+    storedNum = "";
     operator = "";
-    leftNumFromOperation = false;
+    focusNumNeedsReset = false;
 }
 
 function operate(a, b, operator) {
