@@ -36,13 +36,8 @@ function makePercentage() {
 }
 
 function backspace() {
-    if (operator && focusNum) {
-        storedNum = storedNum.slice(0, -1);
-        updateDisplay(storedNum);
-    } else {
-        focusNum = focusNum.slice(0, -1);
-        updateDisplay(focusNum);
-    }
+    focusNum = focusNum.length > 1 ? focusNum.slice(0, -1) : "0";
+    updateDisplay();
 }
 
 function setDecimal() {
