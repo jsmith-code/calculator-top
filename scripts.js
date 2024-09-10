@@ -8,22 +8,21 @@ const DISPLAY_DIGITS = 10;
 let focusNumNeedsReset = false;
 
 function handleInputDigit(digit) {
-    if (operator && focusNum) {
-        storedNum === "0" ? storedNum = digit : storedNum += digit;
-        updateDisplay(storedNum);
+    if (focusNumNeedsReset) {
+        focusNum = digit;
+        focusNumNeedsReset = false;
     } else {
-        // If focusNum comes from previous calculation, ignore
-        // the previous number and allow for a new number to be input
-        if (focusNumNeedsReset) clearCalculator();
         focusNum === "0" ? focusNum = digit : focusNum += digit;
-        updateDisplay(focusNum);
     }
+    updateDisplay();
 }
 
 function setOperator(input) {
     calculate();
+    focusNumNeedsReset = true;
+    storedNum = focusNum;
     operator = input;
-}    
+}  
 
 function toggleSign() {
     if (operator && focusNum && storedNum) {
@@ -73,25 +72,25 @@ function setDecimal() {
 
 function calculate() {
     if (focusNum && storedNum && operator) {
-        let result = operate(focusNum, storedNum, operator);
-        updateDisplay(result);
+        let result = operate(storedNum, focusNum, operator);
         focusNum = result;
         focusNumNeedsReset = true;
         storedNum = "";
         operator = "";
+        updateDisplay();
     }
 }
 
-function updateDisplay(value) {
-    display.textContent = value.substring(0, DISPLAY_DIGITS);
+function updateDisplay() {
+    display.textContent = focusNum.substring(0, DISPLAY_DIGITS);
 }
 
 function clearCalculator() {
-    updateDisplay("0");
     focusNum = "0";
     storedNum = "";
     operator = "";
     focusNumNeedsReset = false;
+    updateDisplay();
 }
 
 function operate(a, b, operator) {
