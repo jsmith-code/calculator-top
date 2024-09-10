@@ -31,13 +31,8 @@ function toggleSign() {
 }
 
 function makePercentage() {
-    if (storedNum) {
-        storedNum = operate(storedNum, 100, "/");
-        updateDisplay(storedNum);
-    } else if (focusNum) {
-        focusNum = operate(focusNum, 100, "/");
-        updateDisplay(focusNum);
-    }
+    focusNum = operate(focusNum, 100, "/");
+    updateDisplay();
 }
 
 function backspace() {
