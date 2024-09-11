@@ -1,2 +1,13 @@
 # calculator-top
 My repository for The Odin Project's [calculator](https://www.theodinproject.com/lessons/foundations-calculator).
+
+# inspiration
+After completing the required and extra credit features, I started looking at others' implementations to inform my own learning. Each project which inspires a rework in my own will be linked here, along with a summary of what was adapted.
+
+### Zonwrk's calculator (https://github.com/Zonwrk/odin-calculator):
+
+The original method of my calculator used a 'leftNum' and 'rightNum' to store two numbers. This meant each function required a check for whether to modify leftNum or rightNum, and updating the display required an input for what to update.
+
+Zonwrk's calculator uses 'displayNum' and 'number1'. The key difference is that once the first number has been set in displayNum, it is stored in number1, and then displayNum is reset for the second number. This means most functions only need to interact with focusNum (including the update display function), which massively simplifies the checks involved for each function.
+
+Because of this, I have reworked my code to match this method.
