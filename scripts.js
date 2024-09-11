@@ -24,32 +24,6 @@ function setOperator(input) {
     operator = input;
 }  
 
-function toggleSign() {
-    if (focusNum === "0") return;
-    focusNum.includes("-") ? focusNum = focusNum.replace("-", "") : focusNum = "-" + focusNum;
-    updateDisplay();
-}
-
-function makePercentage() {
-    focusNum = operate(focusNum, 100, "/");
-    updateDisplay();
-}
-
-function backspace() {
-    focusNum = focusNum.length > 1 ? focusNum.slice(0, -1) : "0";
-    updateDisplay();
-}
-
-function setDecimal() {
-    if (focusNumNeedsReset) {
-        focusNum = "0.";
-        focusNumNeedsReset = false;
-    } else if (!focusNum.includes(".")) {
-        focusNum += ".";
-    }
-    updateDisplay();
-}
-
 function calculate() {
     if (focusNum && storedNum && operator) {
         let result = operate(storedNum, focusNum, operator);
@@ -79,6 +53,32 @@ function operate(a, b, operator) {
 
     let result = getOperationResult(a, b, operator);
     return String(result);
+}
+
+function toggleSign() {
+    if (focusNum === "0") return;
+    focusNum.includes("-") ? focusNum = focusNum.replace("-", "") : focusNum = "-" + focusNum;
+    updateDisplay();
+}
+
+function makePercentage() {
+    focusNum = operate(focusNum, 100, "/");
+    updateDisplay();
+}
+
+function backspace() {
+    focusNum = focusNum.length > 1 ? focusNum.slice(0, -1) : "0";
+    updateDisplay();
+}
+
+function setDecimal() {
+    if (focusNumNeedsReset) {
+        focusNum = "0.";
+        focusNumNeedsReset = false;
+    } else if (!focusNum.includes(".")) {
+        focusNum += ".";
+    }
+    updateDisplay();
 }
 
 function getOperationResult(a, b, operator) {
