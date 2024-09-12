@@ -11,3 +11,9 @@ The original method of my calculator used a 'leftNum' and 'rightNum' to store tw
 Zonwrk's calculator uses 'displayNum' and 'number1'. The key difference is that once the first number has been set in displayNum, it is stored in number1, and then displayNum is reset for the second number. This means most functions only need to interact with focusNum (including the update display function), which massively simplifies the checks involved for each function.
 
 Because of this, I have reworked my code to match this method.
+
+### codelikesuraj's calculator (https://github.com/codelikesuraj/calculator):
+
+Originally, my calculator set onclick functions via the html file with the 'onclick' attribute. While I had considered using querySelector/querySelectorAll to add click functions through javascript only, seeing it implemented in this project is what made me decide to do it. 
+
+It is much more efficient when assigning large groups of buttons (such as the operator or number buttons) to use querySelectorAll and loop through the NodeList. Additionally, onclick can only be used to set one function, which can pose some limitations (although this was not an issue here).
