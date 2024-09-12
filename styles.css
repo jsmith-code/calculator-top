@@ -67,15 +67,15 @@ button:active {
     flex: 1;
 }
 
-.calc-btns-operator {
+.calc-btn-operator {
     background-color: #ffb732;
 }
 
-.calc-btns-operator:hover {
+.calc-btn-operator:hover {
     background-color: #cf9427;
 }
 
-.calc-btns-operator:active {
+.calc-btn-operator:active {
     background-color: #b87318;
 }
 
