@@ -4,6 +4,7 @@ const operatorBtns = document.querySelectorAll(".calc-btn-operator");
 const numberBtns = document.querySelectorAll(".calc-btn-number");
 const clearBtn = document.querySelector(".clear-btn");
 const toggleSignBtn = document.querySelector(".toggle-sign-btn");
+const makePercentageBtn = document.querySelector(".make-percentage-btn");
 
 let focusNum = "0";
 let storedNum = "";
@@ -110,6 +111,8 @@ numberBtns.forEach(btn => btn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => clearCalculator());
 
 toggleSignBtn.addEventListener("click", () => toggleSign());
+
+makePercentageBtn.addEventListener("click", () => makePercentage())
 
 const digits = "0123456789";
 const operators = "/*-+";
