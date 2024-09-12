@@ -1,6 +1,9 @@
 # calculator-top
 My repository for The Odin Project's [calculator](https://www.theodinproject.com/lessons/foundations-calculator).
 
+# preview
+**See a [Live Preview](https://jsmith-code.github.io/calculator-top/).**
+
 # inspiration
 After completing the required and extra credit features, I started looking at others' implementations to inform my own learning. Each project which inspires a rework in my own will be linked here, along with a summary of what was adapted.
 
