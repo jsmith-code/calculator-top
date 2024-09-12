@@ -5,6 +5,7 @@ const numberBtns = document.querySelectorAll(".calc-btn-number");
 const clearBtn = document.querySelector(".clear-btn");
 const toggleSignBtn = document.querySelector(".toggle-sign-btn");
 const makePercentageBtn = document.querySelector(".make-percentage-btn");
+const backspaceBtn = document.querySelector(".backspace-btn");
 
 let focusNum = "0";
 let storedNum = "";
@@ -113,6 +114,8 @@ clearBtn.addEventListener("click", () => clearCalculator());
 toggleSignBtn.addEventListener("click", () => toggleSign());
 
 makePercentageBtn.addEventListener("click", () => makePercentage())
+
+backspaceBtn.addEventListener("click", () => backspace())
 
 const digits = "0123456789";
 const operators = "/*-+";
