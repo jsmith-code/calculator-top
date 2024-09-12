@@ -110,11 +110,8 @@ numberBtns.forEach(btn => btn.addEventListener("click", () => {
 }));
 
 clearBtn.addEventListener("click", () => clearCalculator());
-
 toggleSignBtn.addEventListener("click", () => toggleSign());
-
 makePercentageBtn.addEventListener("click", () => makePercentage())
-
 backspaceBtn.addEventListener("click", () => backspace())
 
 const digits = "0123456789";
