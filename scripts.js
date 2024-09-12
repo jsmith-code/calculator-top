@@ -2,6 +2,7 @@ let display = document.querySelector("#calc-display");
 
 const operatorBtns = document.querySelectorAll(".calc-btn-operator");
 const numberBtns = document.querySelectorAll(".calc-btn-number");
+const clearBtn = document.querySelector(".clear-btn");
 
 let focusNum = "0";
 let storedNum = "";
@@ -104,6 +105,8 @@ operatorBtns.forEach(btn => btn.addEventListener("click", () => {
 numberBtns.forEach(btn => btn.addEventListener("click", () => {
     handleInputDigit(btn.textContent);
 }));
+
+clearBtn.addEventListener("click", () => clearCalculator());
 
 const digits = "0123456789";
 const operators = "/*-+";
