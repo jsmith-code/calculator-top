@@ -7,6 +7,7 @@ const toggleSignBtn = document.querySelector(".toggle-sign-btn");
 const makePercentageBtn = document.querySelector(".make-percentage-btn");
 const backspaceBtn = document.querySelector(".backspace-btn");
 const setDecimalBtn = document.querySelector(".set-decimal-btn");
+const calculateBtn = document.querySelector(".calculate-btn");
 
 let focusNum = "0";
 let storedNum = "";
@@ -115,7 +116,7 @@ toggleSignBtn.addEventListener("click", () => toggleSign());
 makePercentageBtn.addEventListener("click", () => makePercentage())
 backspaceBtn.addEventListener("click", () => backspace())
 setDecimalBtn.addEventListener("click", () => setDecimal())
-
+calculateBtn.addEventListener("click", () => calculate())
 
 const digits = "0123456789";
 const operators = "/*-+";
