@@ -1,4 +1,4 @@
-let display = document.querySelector("#calc-display");
+const display = document.querySelector("#calc-display");
 
 const operatorBtns = document.querySelectorAll(".calc-btn-operator");
 const numberBtns = document.querySelectorAll(".calc-btn-number");
