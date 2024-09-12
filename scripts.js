@@ -10,7 +10,7 @@ const setDecimalBtn = document.querySelector(".set-decimal-btn");
 const calculateBtn = document.querySelector(".calculate-btn");
 
 let focusNum = "0";
-let storedNum = "";
+let memoryNum = "";
 let operator = "";
 const DISPLAY_DIGITS = 10;
 
@@ -29,16 +29,16 @@ function handleInputDigit(digit) {
 function setOperator(input) {
     calculate();
     focusNumNeedsReset = true;
-    storedNum = focusNum;
+    memoryNum = focusNum;
     operator = input;
 }  
 
 function calculate() {
-    if (focusNum && storedNum && operator) {
-        let result = operate(storedNum, focusNum, operator);
+    if (focusNum && memoryNum && operator) {
+        let result = operate(memoryNum, focusNum, operator);
         focusNum = result;
         focusNumNeedsReset = true;
-        storedNum = "";
+        memoryNum = "";
         operator = "";
         updateDisplay();
     }
@@ -50,7 +50,7 @@ function updateDisplay() {
 
 function clearCalculator() {
     focusNum = "0";
-    storedNum = "";
+    memoryNum = "";
     operator = "";
     focusNumNeedsReset = false;
     updateDisplay();
