@@ -113,10 +113,10 @@ numberBtns.forEach(btn => btn.addEventListener("click", () => {
 
 clearBtn.addEventListener("click", () => clearCalculator());
 toggleSignBtn.addEventListener("click", () => toggleSign());
-makePercentageBtn.addEventListener("click", () => makePercentage())
-backspaceBtn.addEventListener("click", () => backspace())
-setDecimalBtn.addEventListener("click", () => setDecimal())
-calculateBtn.addEventListener("click", () => calculate())
+makePercentageBtn.addEventListener("click", () => makePercentage());
+backspaceBtn.addEventListener("click", () => backspace());
+setDecimalBtn.addEventListener("click", () => setDecimal());
+calculateBtn.addEventListener("click", () => calculate());
 
 const digits = "0123456789";
 const operators = "/*-+";
