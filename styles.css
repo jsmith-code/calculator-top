@@ -33,13 +33,13 @@ button:active {
 }
 
 .calc-container {
-    background-color: #2e2e2e;
     width: 350px;
     height: 500px;
-    border-radius: 24px;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    outline: 1px solid hsl(0, 0%, 23%);
+    padding: 8px;
     margin-top: 20px;
 }
 
