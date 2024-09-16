@@ -79,15 +79,19 @@ button:active {
 }
 
 .calc-btn-operator {
-    background-color: #ffb732;
+    background-color: hsl(27, 76%, 60%);
+    color: #eee;
 }
 
 .calc-btn-operator:hover {
-    background-color: #cf9427;
+    background-color: hsl(27, 76%, 65%);
+    color: #ffffff;
 }
 
 .calc-btn-operator:active {
-    background-color: #b87318;
+    outline: 1px solid hsl(27, 76%, 90%);
+    outline-offset: -1px;
+    background-color: hsl(27, 76%, 70%);
 }
 
 .calc-btns-special {
