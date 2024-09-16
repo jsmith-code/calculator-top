@@ -108,6 +108,22 @@ button:active {
     background-color: hsl(221, 53%, 61%);
 }
 
+.sources {
+    color: hsl(0, 0%, 43%);
+    display: flex;
+    gap: 16px;
+}
+
+.sources a {
+    color: hsl(0, 0%, 43%);
+    text-decoration: none;
+}
+
+.sources a:hover {
+    color: hsl(0, 0%, 50%);
+    text-decoration: underline;
+}
+
 .info {
     display: flex;
     flex-direction: column;
