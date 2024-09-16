@@ -43,6 +43,7 @@ button:active {
     flex-direction: column;
     outline: 1px solid hsl(0, 0%, 23%);
     padding: 8px;
+    gap: 8px;
     margin-top: 20px;
 }
 
@@ -59,7 +60,6 @@ button:active {
 }
 
 .calc-btns {
-    margin-top: 16px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
