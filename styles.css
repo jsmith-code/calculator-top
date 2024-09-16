@@ -55,7 +55,6 @@ button:active {
     display: flex;
     justify-content: end;
     align-items: center;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .calc-btns {
