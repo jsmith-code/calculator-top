@@ -12,7 +12,7 @@ const calculateBtn = document.querySelector(".calculate-btn");
 let focusNum = "0";
 let memoryNum = "";
 let operator = "";
-const DISPLAY_DIGITS = 10;
+const DISPLAY_DIGITS = 11;
 
 let focusNumNeedsReset = false;
 
