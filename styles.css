@@ -65,13 +65,13 @@ button:active {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 16px;
+    gap: 8px;
 }
 
 .calc-btns-row {
     display: flex;
     flex-grow: 1;
-    gap: 16px;
+    gap: 8px;
 }
 
 .calc-btns button {
