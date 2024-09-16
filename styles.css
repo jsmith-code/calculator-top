@@ -48,7 +48,7 @@ button:active {
 }
 
 #calc-display {
-    font-size: 64px;
+    font-size: 52px;
     outline: 1px solid #6e6e6e;
     border-radius: 4px;
     padding: 8px 24px;
