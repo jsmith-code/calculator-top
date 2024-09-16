@@ -47,17 +47,15 @@ button:active {
 }
 
 #calc-display {
+    font-size: 64px;
+    outline: 1px solid #6e6e6e;
+    border-radius: 4px;
+    padding: 8px 24px;
+    color: #eee;
     display: flex;
+    justify-content: end;
     align-items: center;
-    flex-direction: row-reverse;
-    margin-top: 20px;
-    font-family: monospace;
-    height: 72px;
-    font-size: 52px;
-    padding: 0 16px;
-    background-color: #c2bea0;
-    color: #464133;
-    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .calc-btns {
