@@ -95,16 +95,19 @@ button:active {
 }
 
 .calc-btns-special {
-    background-color: #5d97ee;
-    color: #ffffff;
+    background-color: hsl(221, 53%, 55%);
+    color: #eee;
 }
 
 .calc-btns-special:hover {
-    background-color: #5587d3;
+    background-color: hsl(221, 53%, 57%);
+    color: #ffffff;
 }
 
 .calc-btns-special:active {
-    background-color: #4b74cc;
+    outline: 1px solid hsl(221, 53%, 85%);
+    outline-offset: -1px;
+    background-color: hsl(221, 53%, 61%);
 }
 
 .info {
